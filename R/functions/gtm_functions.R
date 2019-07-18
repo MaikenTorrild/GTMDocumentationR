@@ -67,9 +67,7 @@ gtm_var_list <- function(account_id, container_id){
   f_var <- gar_api_generator(var_url, "GET")
   v_l <- f_var()
   as.data.frame(v_l$content) -> v_l
-  v_l[,c("variable.variableId", "variable.name", "variable.type", "variable.notes", "variable.parentFolderId")] -> v_l
-  colnames(v_l)[5] <- "folderId"
-  v_l
+    v_l
 }
 
 gtm_trigger_list <- function(account_id, container_id){
